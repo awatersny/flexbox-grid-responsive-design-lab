@@ -1,0 +1,37 @@
+body {
+  display: grid;
+  margin: 0;
+}
+
+img {
+
+}
+
+#name {
+
+}
+
+#occupation {
+
+}
+
+#offer {
+
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#call {
+  width: 50%;
+  background-color: #2f2;
+}
+
+#msg {
+  width: 50%;
+  background-color: #0c0;
+}
