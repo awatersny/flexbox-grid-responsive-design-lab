@@ -1,38 +1,75 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+   in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+
 body {
   background-color: #888;
+  /* Use a system font, if none are available use an available sans-sarif   font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  grid-template-columns: auto;
+
   display: grid;
   margin: 0;
 }
 
 img {
-
+  grid-area: pic;
 }
 
 #name {
-
+  grid-area: hd;
 }
 
 #occupation {
+  grid-area: desc;
+}
 
+#brand {
+  grid-area: main;
 }
 
 #offer {
-
+  grid-area: ft;
 }
 
 #contact {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  grid-area: sd;
 }
 
 #call {
+  display: flex;
   width: 50%;
+  height: 3rem;
   background-color: #2f2;
+  align-items: center;
+  justify-content: center;
 }
 
 #msg {
+  display: flex;
   width: 50%;
+  height: 3rem;
   background-color: #0c0;
+  align-items: center;
+  justify-content: center;
 }
