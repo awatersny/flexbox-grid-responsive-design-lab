@@ -19,6 +19,7 @@ html {
 
 body {
   /* Use a system font, if none are available use an available sans-sarif   font */
+  background-color: #f0f0f0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
@@ -26,11 +27,11 @@ body {
 }
 
 main {
-  height: 100rem;
+  height: 100vh;
   width: 100%;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: (6, 1fr);
+  grid-template-rows: 10% auto 15% 20% 20% 15% ;
   grid-template-areas: 
   "stat"
   "pic"
@@ -38,10 +39,11 @@ main {
   "title"
   "foot"
   "side";
-  font-size: 20px;
+  font-size: 30px;
 }
 
 main > section {
+  background-color: #fff;
   margin: 0;
   display: flex;
   align-items: center;
@@ -49,14 +51,16 @@ main > section {
 }
 
 #status {
+  background-color: #fff;
   display: flex;
-  margin-right: 50px;
+  padding-right: 50px;
   align-items: center;
   justify-content: right;
   grid-area: stat;
 }
 
 #img {
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,15 +70,20 @@ main > section {
 img {
   border: 5px solid #2f2;
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
+}
+
+section > p {
+  margin: 10px;
 }
 
 #name {
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0px;
   grid-area: head;
 }
 
@@ -90,6 +99,7 @@ img {
 }
 
 #offer {
+  background-color: #fff;
   flex-direction: column;
   grid-area: foot;
 }
@@ -102,6 +112,8 @@ img {
 }
 
 #contact > p {
+  font-size: 60px;
+  margin: 0px;
   display: flex;
   width: 50%;
   height: 100%;
@@ -119,8 +131,8 @@ img {
 
 @media only screen and (min-width: 768px) {
   main {
-    grid-template-columns: 30% 1fr;
-    grid-template-rows: (4, 1fr);
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 20% auto auto 10%;
     grid-template-areas: 
     "stat head"
     "pic title"
@@ -128,19 +140,35 @@ img {
     "side foot";
   }
 
+  img {
+    width: 350px;
+    height: 350px;
+    margin: auto 50px
+  }
+
   #status {
     display: flex;
-    margin-left: 50px;
+    padding-left: 50px;
     align-items: center;
     justify-content: left;
-    grid-area: stat;
   }
 
   #brand {
+    background-color: #f0f0f0;
     display: flex;
+    border-left: solid #0c0;
+    margin: auto 5%;
   }
 
-  .main {
+  #brand > p {
+    margin: auto 10px;
+  }
+
+  #name {
+    background-color: #f0f0f0;
+  }
+
+  #offer {
     background-color: #f0f0f0;
   }
 
