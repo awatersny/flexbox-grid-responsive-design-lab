@@ -18,7 +18,6 @@ html {
 }
 
 body {
-  background-color: #ddd;
   /* Use a system font, if none are available use an available sans-sarif   font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -89,6 +88,7 @@ img {
 }
 
 #offer {
+  flex-direction: column;
   grid-area: foot;
 }
 
@@ -113,4 +113,10 @@ img {
 
 #msg {
   background-color: #0c0;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+
+  }
 }
