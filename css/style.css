@@ -31,7 +31,7 @@ main {
   width: 100%;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 10% auto 15% 20% 20% 15% ;
+  grid-template-rows: 10% auto 20% 20% 20% 15% ;
   grid-template-areas: 
   "stat"
   "pic"
@@ -39,7 +39,7 @@ main {
   "title"
   "foot"
   "side";
-  font-size: 30px;
+  font-size: 20px;
 }
 
 main > section {
@@ -132,7 +132,7 @@ section > p {
 @media only screen and (min-width: 768px) {
   main {
     grid-template-columns: auto 1fr;
-    grid-template-rows: 20% auto auto 10%;
+    grid-template-rows: 10% auto auto 10%;
     grid-template-areas: 
     "stat head"
     "pic title"
