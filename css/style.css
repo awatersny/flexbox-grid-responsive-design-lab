@@ -117,6 +117,25 @@ img {
 
 @media only screen and (min-width: 768px) {
   main {
-
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: (4, 1fr);
+    grid-template-areas: 
+    "stat head"
+    "pic title"
+    "pic desc"
+    "side foot";
   }
+
+  #status {
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: left;
+    grid-area: stat;
+  }
+
+  #brand {
+    display: flex;
+  }
+
 }
