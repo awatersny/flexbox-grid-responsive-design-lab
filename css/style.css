@@ -62,6 +62,11 @@ main > section {
   grid-area: pic;
 }
 
+img {
+  border: 5px solid #2f2;
+  border-radius: 50%;
+}
+
 #name {
   display: flex;
   align-items: center;
