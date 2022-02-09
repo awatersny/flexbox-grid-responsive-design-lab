@@ -28,63 +28,73 @@ body {
 
 main {
   height: 100rem;
-  width: 100rem;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: (5, 1fr);
+  grid-template-columns: auto;
+  grid-template-rows: (6, 1fr);
   grid-template-areas: 
   "stat"
   "pic"
   "head"
   "title"
-  "desc"
   "foot"
   "side";
 }
 
 main > section {
   margin: 0;
-}
-
-#status {
-  grid-area: stat;
-}
-
-img {
-  grid-area: pic;
-}
-
-#name {
-  margin: 0;
-  grid-area: head;
-  background-color: yellow;
-}
-
-#occupation {
-  grid-area: title;
-  background-color: aqua;
-}
-
-/* #brand {
-  grid-area: desc;
-} */
-
-#offer {
-  grid-area: foot;
-  background-color: burlywood;
-}
-
-#contact {
-  grid-area: side;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+#status {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  grid-area: stat;
+}
+
+#img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: pic;
+}
+
+#name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  grid-area: head;
+}
+
+#occupation {
+  flex-direction: column;
+  grid-area: title;
+}
+
+#brand {
+  display: none;
+  grid-area: desc;
+}
+
+#offer {
+  grid-area: foot;
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: side;
+}
+
 #contact > p {
   display: flex;
   width: 50%;
-  height: 10rem;
+  height: 100%;
   align-items: center;
   justify-content: center;
 }
