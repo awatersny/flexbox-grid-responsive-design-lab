@@ -79,6 +79,7 @@ img {
 }
 
 #occupation {
+  background-color: #f0f0f0;
   flex-direction: column;
   grid-area: title;
 }
@@ -137,6 +138,10 @@ img {
 
   #brand {
     display: flex;
+  }
+
+  .main {
+    background-color: #f0f0f0;
   }
 
 }
