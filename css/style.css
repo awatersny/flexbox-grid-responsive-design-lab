@@ -31,7 +31,7 @@ main {
   width: 100%;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 10% auto 20% 20% 20% 15% ;
+  grid-template-rows: 10% auto 20% 20% 20% 20% ;
   grid-template-areas: 
   "stat"
   "pic"
@@ -40,6 +40,17 @@ main {
   "foot"
   "side";
   font-size: 20px;
+}
+
+img {
+  border: 5px solid #2f2;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+}
+
+section > p {
+  margin: 10px;
 }
 
 main > section {
@@ -57,6 +68,7 @@ main > section {
   align-items: flex-end;
   justify-content: right;
   grid-area: stat;
+  color: #888;
 }
 
 #img {
@@ -65,17 +77,6 @@ main > section {
   align-items: center;
   justify-content: center;
   grid-area: pic;
-}
-
-img {
-  border: 5px solid #2f2;
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
-}
-
-section > p {
-  margin: 10px;
 }
 
 #name {
@@ -129,53 +130,58 @@ section > p {
   background-color: #0c0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 940px) {
   main {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 10% auto auto 10%;
+    grid-template-columns: 600px 1fr;
+    grid-template-rows: 20% auto auto 20%;
     grid-template-areas: 
     "stat head"
     "pic title"
     "pic desc"
     "side foot";
+    font-size: 4rem;
   }
 
   img {
-    width: 350px;
-    height: 350px;
-    margin: auto 50px
+    width: 70%;
+    height: auto;
+    margin: 0 50px auto 50px
   }
 
   #status {
     display: flex;
     padding-left: 5%;
-    align-items: center;
+    padding-top: 5%;
+    align-items: flex-start;
     justify-content: left;
-  }
-
-  #brand {
-    background-color: #f0f0f0;
-    display: flex;
-    border-left: solid #0c0;
-    margin: auto 5%;
-    justify-content: left;
-  }
-
-  #brand > p {
-    margin: auto 10px;
+    font-size: 4rem;
   }
 
   #name {
     background-color: #f0f0f0;
-    margin: auto 5%;
+    margin: auto 5% 0 5%;
     align-items: flex-start;
+    justify-content: left;
+    font-size: 150%;
+  }
+
+  #brand {
+    background-color: #f0f0f0;
+    color: #999;
+    display: flex;
+    border-left: 7px solid #0c0;
+    margin: 10% 10% 10% 7%;
     justify-content: left;
   }
 
-  #offer {
+  #offer, #occupation {
     background-color: #f0f0f0;
-    margin: auto 5%;
+    margin: auto 6%;
     align-items: flex-start;
+  }
+
+  #brand > p {
+    margin: auto 0 auto 25px;
   }
 
 }
