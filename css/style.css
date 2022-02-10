@@ -45,8 +45,8 @@ main {
 img {
   border: 5px solid #2f2;
   border-radius: 50%;
-  height: 300px;
-  width: 300px;
+  height: auto;
+  width: 60%;
 }
 
 section > p {
